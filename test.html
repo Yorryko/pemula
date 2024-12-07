@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            pemula
+        </title>
+        <style>
+             /* Gaya untuk overlay */
+    #overlay {
+      display: none; /* Default: tidak terlihat */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Warna latar hitam transparan */
+      z-index: 1000; /* Supaya di atas elemen lain */
+    }
+
+    /* Gaya untuk kotak alert */
+    #customAlert {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      z-index: 1001; /* Di atas overlay */
+    }
+
+    /* Tombol untuk menutup alert */
+    #customAlert button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #customAlert button:hover {
+      background-color: #0056b3;
+    }
+            body {
+              /* Warna latar belakang */
+              background-color: red;
+        
+              /* Gambar latar belakang */
+              background-image: url('background.jpg');
+        
+              /* Pengaturan gambar latar belakang */
+              background-repeat: no-repeat; /* Tidak mengulang gambar */
+              background-size: cover; /* Gambar menyesuaikan ukuran layar */
+              background-position: center; /* Gambar berada di tengah */
+            }
+          </style>
+    </head>
+    <body>
+        <h1>Contoh Alert Kustom</h1>
+        <button onclick="tampilkanAlert()">Tampilkan Alert</button>
+      
+        <!-- Overlay dan kotak alert -->
+        <div id="overlay">
+          <div id="customAlert">
+            <p>Ini adalah alert kustom!</p>
+            <button onclick="tutupAlert()">Tutup</button>
+          </div>
+        </div>
+        <script>
+         function tampilkanAlert() {
+      // Menampilkan overlay dan alert
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    function tutupAlert() {
+      // Menyembunyikan overlay dan alert
+      document.getElementById('overlay').style.display = 'none';
+    }
+        </script>
+        
+    </body>
+</html> 
